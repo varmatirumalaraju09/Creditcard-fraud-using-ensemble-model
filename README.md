@@ -58,13 +58,13 @@ A boxplot of the transaction amount classified using the class variable is like,
 ![Markdown Logo](https://github.com/abhi19071993/Creditcard-fraud-using-ensemble-model/blob/master/credit_boxplot.png)
 
 
-Once the preprocessing and EDA are done, we built a random forest model using the train data. The data has been split into train-test in 70-30 split. For the project, since our data is biased, we use the metric AUC to find how good the model is. The area under the curve for the random forest built with the train data is 0.852.
+Once the preprocessing and EDA are done, building a random forest model using the train data. The data has been split into train-test in 70-30 split. For the project, since our data is biased, using the metric AUC to find how good the model is. The area under the curve for the random forest built with the train data is 0.852.
 
 
 ![Markdown Logo](https://github.com/abhi19071993/Creditcard-fraud-using-ensemble-model/blob/master/Randomforest.png)
 
 
-We built another model using rpart and checked the AUC in this case. It is 0.908.
+Building another model using rpart and checked the AUC in this case. It is 0.908.
 
 ![Markdown Logo](https://github.com/abhi19071993/Creditcard-fraud-using-ensemble-model/blob/master/rpart.png)
 
@@ -80,13 +80,13 @@ Using the varImpPlot and the random forest, feature importance has been done.
 
 ## Sampling
 
-Since our data is imbalanced, we tried sampling the data. We did undersampling, oversampling, both and ROSE (Sythetic data built by rose function which uses algorithms internally to build the data). After sampling, we checked AUC for rpart model and random forest for all kinds of sampled data. The best result is from the ROSE data.
+Since our data is imbalanced, sampling needs to be done. Undersampling, oversampling, both and ROSE (Sythetic data built by rose function which uses algorithms internally to build the data) are the types of sampling. After sampling, we checked the AUC for rpart model and random forest for all kinds of sampled data. The best result is from the ROSE data.
 
 ![Markdown Logo](https://github.com/abhi19071993/Creditcard-fraud-using-ensemble-model/blob/master/rose.png)
 
 ## Building models using ROSE data.
 
-We built random forest, rpart, knn and NaiveBayes models using the ROSE data and calculated AUC in every case.
+Models are built using random forest, rpart, knn and NaiveBayes models using the ROSE data and calculated AUC in every case.
 
 ### RPART
 
@@ -141,7 +141,7 @@ The ensembling took around 3 hrs and its result is like,
 The AUC of our ensemble model is 0.949.
 
 
-So we built a model which is around 95% good in predicting.
+Various algorithms have been used and models have been built. The best AUC was observed from the superlearner. So, for the credit card fraud detection, superlearner is the best model.
 
 
 
